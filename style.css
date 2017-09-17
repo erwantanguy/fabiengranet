@@ -1,0 +1,471 @@
+/******************************************************************
+Theme Name: Fabien Granet
+Theme URI: http://http://www.drmgalerie.com/
+Description: Thème basé sur bootstrap pour DRM Galerie
+Author: Erwan & Rozenn Tanguy - Ticoët
+Author URI: http://www.ticoet.fr/
+Version: 1.0
+*********************************************************************/
+
+@import url(css/bootstrap.min.css);
+@import url(css/font-awesome.min.css);
+
+@font-face {
+    font-family: 'gillsans';
+    src: url('fonts/ufonts.com_gillsans-light-webfont.eot');
+    src: url('fonts/ufonts.com_gillsans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ufonts.com_gillsans-light-webfont.woff2') format('woff2'),
+         url('fonts/ufonts.com_gillsans-light-webfont.woff') format('woff'),
+         url('fonts/ufonts.com_gillsans-light-webfont.ttf') format('truetype'),
+         url('fonts/ufonts.com_gillsans-light-webfont.svg#theano_didotregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*{
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h1 a, h2 a, h3 a, .navbar-brand, .nav > li > a{
+	font-family: 'gillsans', Arial, Helvetica, sans-serif;
+	/*font-family:"Times New Roman", Times, serif;*/
+}
+
+* a{
+	color: #000;
+}
+.single-artiste section img.lang{
+	margin: 0;
+}
+section img, section .gallery img{
+	max-width: 100%;
+	height: auto;
+	border: none !important;
+	/*padding: 5px;*/
+}
+iframe, img{
+	max-width: 100%;
+}
+img.alignleft{
+	float:left;
+	margin: 20px 10px 30px 0;
+}
+img.alignright{
+	float:right;
+	margin: 20px 0 30px 10px;
+}
+.gallery {
+	max-width: 100%;
+	overflow: hidden;
+}
+h1{
+	color: #000000;
+	font-size: 25px;
+	font-weight: normal;
+	text-transform:uppercase;
+}
+h2{
+	font-weight:normal;
+	font-variant:small-caps;
+	font-size: 20px;
+	color: #000000;
+}
+.breadcrumb{
+	margin: 10px 0;
+	color: rgba(0,0,0,.8);
+	background-color: transparent;
+	padding: 8px 0;
+	text-transform:uppercase;
+}
+.breadcrumb a{
+	color: rgba(0,0,0,.8);
+	transition: all 1s ease;
+}
+.breadcrumb a:hover{
+	color: rgba(0,0,0,1);
+}
+.breadcrumb .breadcrumb_last{
+	
+}
+/********** header ***************/
+header#top{/*min-height:91px;*/}
+@media (max-width:767px){
+	header#top .navbar-collapse{
+		/*margin-top: 91px;*/
+	}
+}
+@media (min-width:768px) and (max-width: 991px){
+	header#top .navbar-collapse{
+		/*margin-top: 91px;*/
+	}
+}
+header#top a{
+	color: rgb(142, 142, 142);
+	transition: all .5s ease;
+	text-transform:uppercase;
+}
+header#top a:hover{
+	color: rgba(0,0,0,.8);
+	background-color: transparent;
+}
+header#top a:hover{
+	/*color: rgba(0,0,0,1);*/
+}
+	header#top nav a{
+		font-size: 12px;
+	}
+.navbar-toggle .icon-bar{
+	background-color: rgba(0,0,0,.8);
+}
+.navbar-brand{
+	padding: 15px 15px 15px 0;
+	color: #000 !important;
+}
+.menu-menu-secondaire-container ul#menu-menu-socialmedia{
+	margin-right: 0;
+}
+header#top nav .menu-menu-secondaire-container ul#menu-menu-socialmedia a{
+	font-size: 1.2em;
+}
+/**************** slider *************/
+@media (max-width: 767px){
+	#slider .carousel-caption h3 a{
+		font-size: 12px;
+	}
+}
+#slider{
+	margin-bottom: 50px;
+}
+#slider .carousel-caption /*h3 a, #slider .carousel-caption p*/ a{
+	background-color: rgba(255,255,255,.7);
+	color: #000;
+	text-shadow: none;
+	padding: 3px;
+	/*display: block;*/
+}
+#slider .carousel-caption h3 a{
+	color:#000;
+}
+.carousel{
+	padding: 0;
+}
+
+.soliloquy-container{
+	margin-bottom: 50px !important;
+}
+
+/***************** home ***************/
+
+.home #artiste{
+	margin-bottom: 50px;
+	/*background-color: #E3EAEF;*/
+	background: url(/wp-content/themes/fabiengranet/images/fond_gris.png) repeat content-box;
+	padding: 0 15px;
+}
+#artiste #cadre > header, #artiste #cadre > div{
+	/*padding: 0;*/
+}
+.home #portrait{
+	padding-right: 0;
+}
+#artiste #cadre{
+	background: url(/wp-content/themes/fabiengranet/images/fond_gris.png) repeat content-box;
+	padding: 0 15px;
+	
+}
+#artiste header{
+	text-align: center;
+}
+
+/*************** oeuvre home **********/
+/*.home #oeuvre section article:nth-child(3n+1){
+	padding-left: 0;
+}
+.home #oeuvre section article:nth-child(3n+3){
+	padding-right: 0;
+}
+.home #oeuvre section article:nth-child(3n+2){
+	padding-left: 8px;
+	padding-right: 7px;
+}*/
+.home #oeuvre article{
+	padding-bottom: 25px;
+	position: relative;
+}
+.home #oeuvre article .effet{
+	position: relative;
+	overflow: hidden;
+	background-color: #333;
+}
+.home #oeuvre article h1{
+	position: absolute;
+	display: none;
+	bottom: 0;
+	background-color: rgba(255,255,255,.5);
+	padding: 5px 10px;
+	width: calc(100% - 15px);
+}
+.home #oeuvre article:hover h1{
+	display: block;
+}
+/*.home #oeuvre section article{
+	padding: 0;
+}*/
+.home #oeuvre article img{
+	transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0s, opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+}
+.home #oeuvre article img:hover{
+	opacity: .5;
+	transform: scale(1.1);
+}
+.home #oeuvre article h1{
+	font-size: 12px;
+	font-weight: normal;
+	margin-bottom: 50px;
+	margin-top: 10px;
+}
+.home #oeuvre article h1 a{
+	color: #000000;
+}
+/***************** Page ***************/
+
+#col_gauche header, #col_gauche article header, #col_gauche picture{
+	text-align: center;
+}
+.page-template-page-full #col_droite header, .archive #col_gauche article header{
+	text-align: left;
+}
+.page-template-page-full #col_droite header h1{
+	font-size: 1.4em;
+}
+.page-template-page-full #col_droite main{
+	color: rgb(142, 142, 142);
+}
+#col_gauche header h1{
+	/*margin-top: 50px;*/
+}
+.page-template-page-full #col_gauche header h1{
+	margin-top: 0;
+}
+.page-template-page-full #col_droite h2:first-child{
+	margin-top: 0;
+}
+.page .gallery, .page .rgg_imagegrid{
+	/*background-color: #E3EAEF;*/
+}
+
+/*************** archives *************/
+.archive header#title h1{
+	text-align: center;
+}
+.archive #liste a,.search #liste a{
+	color: #000000;
+}
+.search #liste .page-title{
+	font-size: 20px;
+}
+.search #liste .page-title span{
+	font-style: italic;
+	font-size: 1.2em;
+}
+.archive #liste .entry-title a,.search #liste .entry-title a{
+    font-size: .7em;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.archive #liste .entry-title, .search #liste .entry-title{
+	margin-top:0;
+}
+.archive #liste article, .search #liste article{
+	margin-bottom: 20px;
+	/*min-height: 120px;*/
+	clear: both;
+}
+.archive #liste .picture img, .search #liste .picture img{
+	margin-bottom: 30px;
+}
+.archive #liste article footer, .search #liste article footer{
+	margin-bottom: 30px;
+}
+#nolist article, #nolist aside{
+	margin-bottom: 50px;
+}
+/*************** single ***************/
+.single #picture img, .single #picture source{
+	/*margin-bottom: 30px;*/
+}
+.single section#content{
+	margin-bottom: 30px;
+}
+.sharedaddy.sd-sharing-enabled{
+	margin: 20px 0;
+}
+#col_gauche picture{
+	display: block;
+}
+.single header h1{
+	font-size: 1.4em;
+}
+.single #col_droite main{
+	color: rgb(142, 142, 142);
+}
+/**************** single oeuvre ******/
+#oeuvre, #tribe-events-pg-template{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.single-artiste section img{
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+.single-artiste #col_gauche header{
+	text-align: center;
+	/*margin-top: 66px;*/
+	margin-bottom: 66px;
+}
+.single-artiste #col_gauche header h1{
+	color: #000000;
+    font-size: 44px;
+    font-weight: normal;
+    text-transform:uppercase;
+    margin-top: 0;
+}
+.single-artiste #col_droite h2:first-child{
+	margin-top: 0;
+}
+
+.single-artiste section .gallery{
+	margin-bottom: 50px !important;
+}
+.single-artiste section .gallery-item{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.single-artiste section .gallery-item img{
+	border: none !important;
+	margin-bottom: 0;
+}
+
+/*************** événements ************/
+.post-type-archive-tribe_events .tribe-bar-is-disabled .tribe-events-page-title{margin:inherit !important;}
+#tribe-events-pg-template, .events-list.tribe-bar-is-disabled #tribe-events-content-wrapper{
+	max-width:5000px !important;
+}
+.events-list #tribe-events-footer, .single-tribe_events #tribe-events-footer, .tribe-events-day #tribe-events-footer, .tribe-events-map #tribe-events-footer, .tribe-events-photo #tribe-events-footer{
+	border:none !important;
+}
+.tribe-events-event-meta .tribe-events-meta-group.col-lg-12{
+	width: 100% !important;
+}
+
+.events-archive footer.entry-meta, .events-archive header.entry-header, .events-archive span.edit-link, .single-tribe_events footer.entry-meta, .single-tribe_events header.entry-header, .single-tribe_organizer footer.entry-meta, .single-tribe_organizer header.entry-header, .single-tribe_venue footer.entry-meta, .single-tribe_venue header.entry-header{
+	display: block !important;
+}
+#tribe-events-content{
+	padding: 0 !important;
+}
+.single-tribe_events .tribe-events-event-meta{
+	margin: 0 !important;
+}
+.single-tribe_events .tribe-events-event-meta{
+	background-color: transparent !important;
+	border: none !important;
+}
+.single-tribe_events .tribe-events-event-meta h3.tribe-events-single-section-title{
+	margin-top: 0;
+}
+.tribe-events-notices{
+	background-color: rgba(0,0,0,.1) !important;
+	margin-top: 0 !important;
+	text-shadow: none !important;
+	border: none !important;
+	color: #333 !important;
+}
+
+.single-tribe_events .tribe-events-schedule h3{
+	white-space: normal !important;
+	font-size: 1.2em !important;
+}
+.single-tribe_events .tribe-events-schedule h3 span{
+	font-family: "didot" !important;
+}
+/************** lang *******************/
+
+#col{
+	-webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+    -webkit-column-width: 600px; /* Chrome, Safari, Opera */
+   -moz-column-width: 600px;
+    column-width: 600px;
+}
+body.lang, section.lang{
+	width: 600px;
+}
+
+/**************** sidebar **************/
+.widget_sidebar ul, .widget_sidebar ol{
+	margin: 0;
+	padding: 0;
+	list-style: outside none none;
+}
+.widget_sidebar h3{
+	color: rgba(0,0,0,1);
+	text-transform:uppercase;
+	font-weight: normal;
+}
+.widget_sidebar li{
+	margin-bottom: 10px;
+}
+.widget_sidebar a, .widget_sidebar h4 a{
+	color: #000;
+	font-variant:small-caps;
+	font-weight: normal;
+	font-size: 14px;
+}
+.widget_sidebar li span{
+	display: block;
+	font-style: italic;
+}
+.widget_sidebar h4{
+	margin-bottom: 0;
+	font-weight: normal;
+}
+.widget_sidebar li .duration{
+	font-style: italic;
+}
+/****************** footer ***************/
+#footer{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	color: #000000;
+    /*text-align:right;*/ 
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 20px;
+    font-variant:small-caps;
+}
+#footer a{
+	color: #000;
+}
+#footer .navbar-nav > li > a{
+	padding-top: 0;
+	padding-bottom: 0;
+	/*color: rgb(142, 142, 142);*/
+	text-transform:uppercase;
+}
+#footer, #footer a{
+	color: rgb(142, 142, 142);
+	transition: all .5s ease;
+	text-transform:uppercase;
+}
+#footer #wpadminbar a{
+	color: #fff;
+	text-transform: none;
+}
+#footer a:hover{
+	color: rgba(0,0,0,.8);
+	background-color: transparent;
+}
